@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.py[cod]
+support_mate.db
+support_mate.db-shm
+support_mate.db-wal

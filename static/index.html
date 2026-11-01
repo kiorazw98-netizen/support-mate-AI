@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7fb">
+    <title>Support Mate — Customer care, made simple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css?v=4">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="Support Mate home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>support<span class="brand-light">mate</span></span>
+        </a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-view="inbox">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5zm0 9h4l1.5 2h5l1.5-2h4"/></svg>
+            <span>Inbox</span><span class="nav-count" id="nav-open-count">0</span>
+          </button>
+          <button class="nav-link" data-view="dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="4" rx="1.5"/><rect x="13" y="10" width="7" height="10" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/></svg>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-link" data-view="knowledge">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14m0-14C9.7 5.3 7 4.6 4 5v13c3-.4 5.7.3 8 2m0-13c2.3-1.7 5-2.4 8-2v13c-3-.4-5.7.3-8 2"/></svg>
+            <span>Knowledge base</span>
+          </button>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-tip">
+          <div class="tip-icon">✳</div>
+          <strong>A little more helpful.</strong>
+          <p>Teach your assistant about your business in the knowledge base.</p>
+          <button class="tip-link" data-view="knowledge">Add an answer <span>→</span></button>
+        </div>
+        <div class="profile">
+          <div class="avatar avatar-purple">S</div>
+          <div class="profile-copy"><strong>Support team</strong><span>Workspace admin</span></div>
+          <span class="profile-menu">···</span>
+        </div>
+        <div class="creator-credit">
+          <span>Created by</span>
+          <strong>DephineV Benyera</strong>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Workspace</span><span class="crumb-divider">/</span><strong id="page-name">Inbox</strong></div>
+          <div class="topbar-actions">
+            <span class="status-indicator"><i></i> All systems operational</span>
+            <button class="icon-button" id="refresh-button" aria-label="Refresh dashboard" title="Refresh">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4.6 9a7.5 7.5 0 0 1 12.8-2L20 12m-16 5v-5h5m10.4 3a7.5 7.5 0 0 1-12.8 2L4 12"/></svg>
+            </button>
+            <button class="button button-secondary logout-button" id="logout-button" type="button" hidden>Sign out</button>
+            <div class="avatar avatar-green">S</div>
+          </div>
+        </header>
+
+        <section class="view-panel active" id="inbox-view">
+          <div class="page-heading">
+            <div><div class="eyebrow">CUSTOMER CARE</div><h1>Your inbox</h1><p class="page-description">Every conversation, all in one place.</p></div>
+            <button class="button button-primary" id="new-chat-button"><span class="button-plus">+</span> New conversation</button>
+          </div>
+          <div class="inbox-layout">
+            <section class="chat-card">
+              <div class="chat-header">
+                <div class="chat-title-group"><div class="bot-avatar"><span class="bot-eyes">••</span></div><div><h2>Support assistant</h2><p><span class="online-dot"></span> Online · usually replies instantly</p></div></div>
+                <button class="icon-button" id="chat-menu-button" aria-label="More options">···</button>
+              </div>
+              <div class="chat-messages" id="chat-messages" aria-live="polite">
+                <div class="welcome-message">
+                  <div class="welcome-symbol">✳</div>
+                  <h3>Hi there! How can we help?</h3>
+                  <p>Ask us anything about our products, policies, or services.</p>
+                  <div class="suggestion-list">
+                    <button class="suggestion" data-prompt="What are your business hours?">What are your business hours?</button>
+                    <button class="suggestion" data-prompt="What is your return policy?">What is your return policy?</button>
+                    <button class="suggestion" data-prompt="How long does shipping take?">How long does shipping take?</button>
+                  </div>
+                </div>
+              </div>
+              <form class="chat-composer" id="chat-form">
+                <textarea id="chat-input" rows="1" maxlength="4000" placeholder="Write your message..." aria-label="Your message" required></textarea>
+                <div class="composer-footer"><span>We typically reply in a few seconds</span><button class="send-button" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4.5 14-3-5.5zm6.5 1.5L19 5"/></svg></button></div>
+              </form>
+            </section>
+            <aside class="inbox-aside">
+              <div class="aside-card customer-card">
+                <div class="aside-card-heading"><h3>Conversation</h3><span class="live-pill">LIVE</span></div>
+                <div class="customer-profile"><div class="avatar avatar-peach" id="customer-avatar">G</div><div><strong id="customer-name-label">Guest</strong><span>Customer</span></div></div>
+                <div class="detail-row"><span>Conversation ID</span><strong id="conversation-label">New</strong></div>
+                <div class="detail-row"><span>Status</span><span class="status-text"><i></i> Active</span></div>
+              </div>
+              <div class="aside-card help-card">
+                <div class="help-icon">✦</div><h3>Here to help</h3>
+                <p>If we can't find an answer, we'll create a support ticket so a real person can follow up.</p>
+                <div class="help-footer"><span>Human support</span><span class="help-available"><i></i> Available</span></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view-panel" id="dashboard-view">
+          <div class="page-heading">
+            <div><div class="eyebrow">OVERVIEW</div><h1>Dashboard</h1><p class="page-description">A clear view of your customer support.</p></div>
+            <button class="button button-secondary" data-view="inbox">Go to inbox <span>→</span></button>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-label">Total conversations <span class="stat-symbol symbol-violet">↗</span></div><div class="stat-value" id="stat-conversations">0</div><div class="stat-note">Since you started</div></article>
+            <article class="stat-card"><div class="stat-label">Needs attention <span class="stat-symbol symbol-orange">!</span></div><div class="stat-value" id="stat-open">0</div><div class="stat-note">Open support tickets</div></article>
+            <article class="stat-card"><div class="stat-label">Resolved tickets <span class="stat-symbol symbol-green">✓</span></div><div class="stat-value" id="stat-resolved">0</div><div class="stat-note">Handled by your team</div></article>
+            <article class="stat-card"><div class="stat-label">Knowledge articles <span class="stat-symbol symbol-blue">▤</span></div><div class="stat-value" id="stat-knowledge">0</div><div class="stat-note">Answers for your assistant</div></article>
+          </div>
+          <section class="data-card">
+            <div class="section-heading"><div><h2>Support tickets</h2><p>Questions that need a human touch.</p></div><span class="table-caption" id="ticket-count">0 tickets</span></div>
+            <div class="table-wrap"><table><thead><tr><th>Customer</th><th>Request</th><th>Created</th><th>Status</th><th></th></tr></thead><tbody id="tickets-body"></tbody></table><div class="empty-state" id="tickets-empty"><div class="empty-icon">✳</div><strong>All caught up</strong><span>New tickets will show up here.</span></div></div>
+          </section>
+          <section class="data-card conversations-card">
+            <div class="section-heading"><div><h2>Recent conversations</h2><p>Your latest customer interactions.</p></div></div>
+            <div class="conversation-list" id="conversations-list"></div>
+          </section>
+        </section>
+
+        <section class="view-panel" id="knowledge-view">
+          <div class="page-heading">
+            <div><div class="eyebrow">YOUR BUSINESS, IN A NUTSHELL</div><h1>Knowledge base</h1><p class="page-description">Give your assistant the right answers, every time.</p></div>
+          </div>
+          <div class="knowledge-layout">
+            <section class="data-card knowledge-list-card"><div class="section-heading"><div><h2>Your articles</h2><p>Business information used to answer customer questions.</p></div><span class="table-caption" id="knowledge-count">0 articles</span></div><div id="knowledge-list" class="knowledge-list"></div></section>
+            <aside class="data-card article-form-card">
+              <div class="section-heading"><div><h2>Add an answer</h2><p>Share a question and its answer.</p></div></div>
+              <form id="knowledge-form" class="knowledge-form">
+                <label for="article-question">Customer question</label><input id="article-question" name="question" maxlength="500" placeholder="e.g. When are you open?" required>
+                <label for="article-answer">Your answer</label><textarea id="article-answer" name="answer" rows="5" maxlength="5000" placeholder="Write a clear, helpful answer..." required></textarea>
+                <button class="button button-primary form-submit" type="submit">Add to knowledge base <span>→</span></button>
+              </form>
+              <div class="article-hint"><span>✦</span> Keep answers clear and specific for the most helpful replies.</div>
+            </aside>
+          </div>
+        </section>
+        <dialog class="login-dialog" id="admin-login-dialog" aria-labelledby="login-title">
+          <form class="login-form" id="admin-login-form">
+            <div class="welcome-symbol">✳</div>
+            <h2 id="login-title">Admin sign in</h2>
+            <p>Sign in to view conversations, manage tickets, and update your knowledge base.</p>
+            <label for="admin-username">Username</label>
+            <input id="admin-username" name="username" autocomplete="username" maxlength="100" required>
+            <label for="admin-password">Password</label>
+            <input id="admin-password" name="password" type="password" autocomplete="current-password" maxlength="256" required>
+            <div class="login-actions">
+              <button class="button button-secondary" id="cancel-login-button" type="button">Cancel</button>
+              <button class="button button-primary" type="submit">Sign in</button>
+            </div>
+          </form>
+        </dialog>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </main>
+    </div>
+    <script src="/static/app.js?v=2" defer></script>
+  </body>
+</html>
