@@ -1,4 +1,47 @@
-# Support Mate
+# Support Mate 
+Support Mate — Project Documentation
+
+1. Application Overview
+
+Support Mate is an AI-powered customer support application designed to help small businesses manage customer enquiries and complaints.
+
+2. Purpose
+
+The application aims to reduce the workload of business owners, improve response times and provide better customer service.
+
+3. Main Features
+
+Answer common customer questions.
+
+Record customer support requests.
+
+Track complaints and unresolved issues.
+
+Escalate questions the AI cannot answer.
+
+Allow business owners to review support issues.
+
+4. How It Works
+
+A customer submits a question. Support Mate checks the business's information and provides an answer. If it cannot answer, the issue is flagged for human assistance.
+
+5. Technologies Used
+
+Python: Backend programming.
+
+FastAPI: Handles application requests and APIs.
+
+HTML: Structures the webpage.
+
+CSS: Styles the webpage.
+
+JavaScript: Adds interactive behaviour.
+
+SQLite: Stores application data.
+
+6. Conclusion
+
+Support Mate demonstrates how AI and software can help small businesses manage customer support more efficiently.
 Live Demo https://support-mate-ai-2.onrender.com
 A lightweight customer-support chatbot and admin dashboard built with FastAPI, SQLite, HTML, CSS, and JavaScript.
 
